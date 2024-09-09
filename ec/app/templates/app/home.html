@@ -1,0 +1,174 @@
+{% extends "app/base.html" %}
+{% load static %}
+
+{% block title %}Home{% endblock title %}
+
+
+{% block banner_slider %}
+
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'app/images/banner/b1.jpg' %}" class="d-block w-100" alt="banner image">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'app/images/banner/b2.jpg' %}" class="d-block w-100" alt="banner image">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'app/images/banner/b3.jpg' %}" class="d-block w-100" alt="banner image">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'app/images/banner/b4.jpg' %}" class="d-block w-100" alt="banner image">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+{% endblock banner_slider %}
+
+
+
+{% block info %}
+
+<div class="container">
+    <div class="row bg-success text-center p-5 text-white border-bottom shadow">
+        <h1>Products</h1>
+        <small class="fs-5">
+            Dairy products are a nutritious and versatile addition to any diet, offering a rich source of essential vitamins and minerals like calcium, vitamin D, and protein. Our selection of dairy products includes fresh milk, creamy yogurts, rich cheeses, and more, all sourced from trusted suppliers who prioritize quality and sustainability. Whether you're looking for a healthy snack, a cooking ingredient, or a delicious treat, our dairy products deliver on taste and nutrition, making them a staple in households everywhere.
+        </small>
+    </div>
+</div>
+{% endblock info %}
+
+{% block main-content %}
+{% comment %} <div class="container">
+  <h2 class="text-center">Dairy Products</h2>
+  <br><br>
+  <div class="row container"> {% endcomment %}
+    {% comment %} <div class ="col-md-4 col-sm-4 mi-go wow fadeInUp"
+    data-wow-duration="1s" data-wow-delay="0.6s"
+    style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;">
+      <div class="goodnessec buttermilk smg">
+        <a href="#">
+          <div class="goodnesseccont text-center">
+            <img src="{% static 'app/images/product/buffalo-ghee.png' %}" class="img-responsive" alt="">
+            <p class="mlkpro">Ghee</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class ="col-md-4 col-sm-4 mi-go wow fadeInUp"
+    data-wow-duration="1s" data-wow-delay="0.6s"
+    style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;">
+      <div class="goodnessec buttermilk smg">
+        <a href="#">
+          <div class="goodnesseccont text-center">
+            <img src="{% static 'app/images/product/curd-total.png' %}" class="img-responsive" alt="">
+            <p class="mlkpro">Curd</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class ="col-md-4 col-sm-4 mi-go wow fadeInUp"
+    data-wow-duration="1s" data-wow-delay="0.6s"
+    style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;">
+      <div class="goodnessec buttermilk smg">
+        <a href="#">
+          <div class="goodnesseccont text-center">
+            <img src="{% static 'app/images/product/kulfi.png' %}" class="img-responsive" alt="">
+            <p class="mlkpro">Kulfi</p>
+          </div>
+        </a>
+      </div>
+    </div> {% endcomment %}
+    <div class="container">
+      <h2 class="text-center">Dairy Products</h2>
+      <br><br>
+      <div class="row container">
+        <div class="col-md-4 col-sm-4">
+          <div class="card h-100">
+            <a href="{% url "category" 'GH' %}">
+              <img src="{% static 'app/images/product/buffalo-ghee.png' %}" class="card-img-top img-fluid" alt="Ghee">
+              <div class="card-body text-center">
+                <p class="mlkpro">Ghee</p>
+              </div>
+            </a>
+          </div>
+        </div>
+    
+        <div class="col-md-4 col-sm-4">
+          <div class="card h-100">
+            <a href="{% url "category" 'CR' %}">
+              <img src="{% static 'app/images/product/curd-total.png' %}" class="card-img-top img-fluid" alt="Curd">
+              <div class="card-body text-center">
+                <p class="mlkpro">Curd</p>
+              </div>
+            </a>
+          </div>
+        </div>
+    
+        <div class="col-md-4 col-sm-4">
+          <div class="card h-100">
+            <a href="{% url "category" 'IC' %}">
+              <img src="{% static 'app/images/product/kulfi.png' %}" class="card-img-top img-fluid" alt="Kulfi">
+              <div class="card-body text-center">
+                <p class="mlkpro">Ice Cream</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+      <br><br>
+      <div class="row container">
+        <div class="col-md-4 col-sm-4">
+          <div class="card h-100">
+            <a href="{% url "category" 'MS' %}">
+              <img src="{% static 'app/images/product/milk-shake-chocolate.png' %}" class="card-img-top img-fluid" alt="Ghee">
+              <div class="card-body text-center">
+                <p class="mlkpro">MilkShake</p>
+              </div>
+            </a>
+          </div>
+        </div>
+    
+        <div class="col-md-4 col-sm-4">
+          <div class="card h-100">
+            <a href="{% url "category" 'LS' %}">
+              <img src="{% static 'app/images/product/sweet-lassi.png' %}" class="card-img-top img-fluid" alt="Curd">
+              <div class="card-body text-center">
+                <p class="mlkpro">Lassi</p>
+              </div>
+            </a>
+          </div>
+        </div>
+    
+        <div class="col-md-4 col-sm-4">
+          <div class="card h-100">
+            <a href="{% url "category" 'CZ' %}">
+              <img src="{% static 'app/images/product/mozzarellacheese.png' %}" class="card-img-top img-fluid" alt="Kulfi">
+              <div class="card-body text-center">
+                <p class="mlkpro">Cheese</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+    
+<br>
+<br>
+{% endblock main-content %}
+
