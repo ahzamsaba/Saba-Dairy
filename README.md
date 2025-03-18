@@ -15,12 +15,17 @@ A full-featured e-commerce platform built with Django, allowing users to browse,
    git clone https://github.com/ahzamsaba/Saba-Dairy.git
 
 3. Activate virtual environment:
-   # On Windows: env\Scripts\activate
+   On Windows:
+   python -m venv env
+env\Scripts\activate
+
 
 4. Install dependencies:
+   ```sh
    pip install -r requirements.txt
 
 5. Apply migrations and run the server:
+   ```sh
    python manage.py migrate 
    python manage.py runserver
 
