@@ -33,3 +33,9 @@ env\Scripts\activate
    http://127.0.0.1:8000
 
 
+## Screenshots 📸
+
+### Homepage
+![Homepage](https://github.com/user-attachments/assets/16c4b086-24d2-4102-aaa8-acf41ba60a47)
+
+
